@@ -16,7 +16,7 @@ public class SecurityConfig {
                         .requestMatchers("/auth/**").permitAll()
                         .anyRequest().authenticated()
                 )
-                // 폼 로그인 비활성화 (무상태 API의 경우 필요하지 않음)
+                // 폼 로그인 비활성화 
                 .formLogin(form -> form.disable())
                 .csrf(csrf->csrf.disable());
 //                .httpBasic(Customizer.withDefaults());
